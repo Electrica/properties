@@ -49,12 +49,16 @@ class Plugin extends PluginBase
          * @var $model ShopaholicProduct
          */
         ProductModel::extend(function ($model){
-            $model->hasOne['properties'] = ['Electrica\properties\Models\Properties'];
+            $model->hasOne['properties'] = ['Electrica\Properties\Models\Properties'];
         });
 
         ProductController::extendFormFields(function ($form, $model, $context){
 
             if(!$model instanceof ProductModel){
+                return;
+            }
+
+            if(!$model->exists){
                 return;
             }
 
@@ -108,6 +112,10 @@ class Plugin extends PluginBase
                 ],
             ], 'primary');
 
+        });
+
+        ProductController::extend(function($controller){
+            $controller->importExportConfig = '~/plugins/electrica/properties/models/properties/import/config_import_export.yaml';
         });
 
 

@@ -19,6 +19,13 @@ class Properties extends Model
     protected $guarded = ['*'];
 
     /**
+     * @var array 
+     */
+    protected $rules = [
+        'product_id' => 'required'
+    ];
+
+    /**
      * @var array Fillable fields
      */
     protected $fillable = [];
