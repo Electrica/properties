@@ -128,10 +128,8 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Electrica\Properties\Components\MyComponent' => 'myComponent',
+            'Electrica\Properties\Components\PropertiesList' => 'PropertiesList',
         ];
     }
 
