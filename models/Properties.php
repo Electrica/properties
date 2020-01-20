@@ -28,7 +28,17 @@ class Properties extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'dimentions',
+        'temp_condition',
+        'volume',
+        'power',
+        'supply',
+        'production',
+        'perfomance',
+        'capacity',
+        'gas_power'
+    ];
 
     /**
      * @var array Relations
@@ -44,6 +54,10 @@ class Properties extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function beforeCreate(){
+        trace_log('Модель ' . self::class . ' создана');
+    }
 
     public static function getFromProperties($product){
 

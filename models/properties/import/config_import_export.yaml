@@ -27,31 +27,31 @@ import:
       additional_category:
         label: 'lovata.shopaholic::lang.field.additional_category'
 
-      dimentions:
+      properties[dimentions]:
         label: Габариты
 
-      temp_condition:
+      properties[temp_condition]:
         label: Темп. режим
 
-      volume:
+      properties[volume]:
         label: Объем
 
-      power:
+      properties[power]:
         label: Мощность
 
-      supply:
+      properties[supply]:
         label: Питание
 
-      production:
+      properties[production]:
         label: Производство
 
-      perfomance:
+      properties[perfomance]:
         label: Производительность
 
-      capacity:
+      properties[capacity]:
         label: Вместимость
 
-      gas_power:
+      properties[gas_power]:
         label: Газовая мощность
 
   form:

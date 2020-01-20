@@ -50,6 +50,13 @@ class Plugin extends PluginBase
          */
         ProductModel::extend(function ($model){
             $model->hasOne['properties'] = ['Electrica\Properties\Models\Properties'];
+
+            $model->fillable[] = 'dimentions';
+
+            $model->addDynamicMethod('setPropertiesAttribute', function ($arValueList){
+                dd($arValueList);
+            });
+
         });
 
         ProductController::extendFormFields(function ($form, $model, $context){
