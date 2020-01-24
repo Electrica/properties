@@ -28,17 +28,17 @@ class Properties extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [
-        'dimentions',
-        'temp_condition',
-        'volume',
-        'power',
-        'supply',
-        'production',
-        'perfomance',
-        'capacity',
-        'gas_power'
-    ];
+//    protected $fillable = [
+//        'dimentions',
+//        'temp_condition',
+//        'volume',
+//        'power',
+//        'supply',
+//        'production',
+//        'perfomance',
+//        'capacity',
+//        'gas_power'
+//    ];
 
     /**
      * @var array Relations
